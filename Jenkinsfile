@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git branch '2.6.0', url: 'https://github.com/diprakhar/shopizer.git'
+                git branch 'main', url: 'https://github.com/diprakhar/SpringPetClinic.git'
             }
         }
         stage('Build'){
