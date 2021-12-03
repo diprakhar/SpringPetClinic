@@ -2,6 +2,11 @@ pipeline{
     agent{label "master"}
     tools{maven "M3"}
     stages{
+        stage('Checkout'){
+            steps{
+                git branch '2.6.0', url: 'https://github.com/diprakhar/shopizer.git'
+            }
+        }
         stage('Build'){
             steps{
                 sh 'mvn compile'
